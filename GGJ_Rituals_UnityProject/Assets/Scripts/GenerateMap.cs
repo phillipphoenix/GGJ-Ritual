@@ -14,6 +14,9 @@ public class GenerateMap : MonoBehaviour
     public GameObject TreePrefab;
     public int SkipSpaces;
 
+    // Random offset values.
+    public Vector2 MaxOffset;
+
     public void Awake()
     {
         for (int y = 0; y < MapSize.y; y += SkipSpaces)
@@ -25,7 +28,9 @@ public class GenerateMap : MonoBehaviour
                 if (density > MinDensityForTrees)
                 {
                     GameObject tree = GameObject.Instantiate(TreePrefab);
-                    tree.transform.position = new Vector3(x + MapOrigin.x, 0, y + MapOrigin.y);
+                    Vector2 offset = new Vector2(Random.value * MaxOffset.x, Random.value * MaxOffset.y);
+                    Debug.Log(offset);
+                    tree.transform.position = new Vector3(x + MapOrigin.x + offset.x, 0, y + MapOrigin.y + offset.y);
                 }
             }
         }

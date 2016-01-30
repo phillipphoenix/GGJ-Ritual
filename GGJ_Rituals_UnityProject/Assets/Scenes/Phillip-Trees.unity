@@ -156,7 +156,7 @@ Transform:
   m_GameObject: {fileID: 82131279}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: -10}
-  m_LocalScale: {x: 50, y: 1, z: 50}
+  m_LocalScale: {x: 100, y: 1, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -219,8 +219,8 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 50
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -340,7 +340,8 @@ MonoBehaviour:
   FractionBrownianMotionIterations: 20
   MinDensityForTrees: 0.6
   TreePrefab: {fileID: 199660, guid: 798e413801690f94dad3e2300c11b446, type: 2}
-  SkipSpaces: 5
+  SkipSpaces: 10
+  MaxOffset: {x: 20, y: 40}
 --- !u!4 &1728545510
 Transform:
   m_ObjectHideFlags: 0

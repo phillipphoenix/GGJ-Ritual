@@ -3,22 +3,26 @@ using System.Collections;
 
 public class GenerateMap : MonoBehaviour
 {
-
+    [Header("Map settings")]
     public Vector2 MapOrigin;
     public Vector2 MapSize;
 
     // General values.
+    [Header("General values")]
     public int Seed;
-    public int FractionBrownianMotionIterations;
+    public int FbmIterations;
 
     // Values for generating trees.
+    [Header("Tree settings")]
     public float MinDensityForTrees;
     public GameObject TreePrefab;
     public int SkipSpaces;
     public bool UseIterationsForTrees;
+    public Vector2 MaxOffset; // Random offset values.
 
-    // Random offset values.
-    public Vector2 MaxOffset;
+    // Values for placing totems.
+    [Header("Totem settings")]
+    public int NbOfTotems;
 
     public void Awake()
     {
@@ -32,7 +36,7 @@ public class GenerateMap : MonoBehaviour
         {
             for (int x = 0; x < MapSize.x; x += SkipSpaces)
             {
-                float density = FractionBrownianMotion(FractionBrownianMotionIterations, x / MapSize.x, y / MapSize.y);
+                float density = FractionBrownianMotion(FbmIterations, x / MapSize.x, y / MapSize.y);
                 if (density > MinDensityForTrees)
                 {
                     GameObject tree = GameObject.Instantiate(TreePrefab);

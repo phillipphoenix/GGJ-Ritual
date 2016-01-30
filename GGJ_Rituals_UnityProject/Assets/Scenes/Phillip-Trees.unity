@@ -337,12 +337,13 @@ MonoBehaviour:
   MapOrigin: {x: -500, y: -500}
   MapSize: {x: 1000, y: 1000}
   Seed: 123
-  FractionBrownianMotionIterations: 12
+  FbmIterations: 12
   MinDensityForTrees: 0.52
   TreePrefab: {fileID: 199660, guid: 798e413801690f94dad3e2300c11b446, type: 2}
   SkipSpaces: 15
   UseIterationsForTrees: 0
   MaxOffset: {x: 20, y: 40}
+  NbOfTotems: 0
 --- !u!4 &1728545510
 Transform:
   m_ObjectHideFlags: 0

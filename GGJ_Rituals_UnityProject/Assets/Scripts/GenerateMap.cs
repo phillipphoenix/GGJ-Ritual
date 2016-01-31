@@ -109,7 +109,7 @@ public class GenerateMap : MonoBehaviour
             }
             GameObject village = GameObject.Instantiate(VillagePrefab);
             village.transform.position = new Vector3(x + MapOrigin.x, 0, y + MapOrigin.y);
-            village.transform.parent = villageParent.transform;
+            village.transform.SetParent(villageParent.transform);
             villageList.Add(village.transform);
             ClearLandscapeObstacles(village.transform, VillageClearingDistance);
         }

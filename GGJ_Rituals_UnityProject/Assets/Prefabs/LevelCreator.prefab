@@ -39,22 +39,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1677bcf4650d30d45a9881d88718bfda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MapOrigin: {x: -1000, y: -1000}
-  MapSize: {x: 2000, y: 2000}
-  Seed: 123
+  MapOrigin: {x: -2000, y: -2000}
+  MapSize: {x: 4000, y: 4000}
+  Seed: 436
   FbmIterations: 12
   MinDensityForTrees: 0.52
   TreePrefab: {fileID: 199660, guid: 798e413801690f94dad3e2300c11b446, type: 2}
   SkipSpaces: 15
-  UseIterationsForTrees: 0
+  UseIterationsForTrees: 1
   MaxOffset: {x: 20, y: 40}
-  NbOfTotems: 5
+  NbOfTotems: 30
   TotemPrefab: {fileID: 125628, guid: 183682038623aae4f818e46b385b9dbf, type: 2}
   MinTotemDistance: 50
-  TotemClearingDistance: 50
-  NbOfVillages: 6
-  VillagePrefab: {fileID: 128828, guid: abe01e938253eee45880034b20535db8, type: 2}
-  MinVillageDistance: 200
+  TotemClearingDistance: 100
+  NbOfVillages: 20
+  VillagePrefab: {fileID: 164010, guid: 54870d00a1ecdb84db598908e4a6f21e, type: 2}
+  MinVillageDistance: 500
   VillageClearingDistance: 100
   ShamanPrefab: {fileID: 153992, guid: 8ad27bfb78abd964eae37c6e68d19d1d, type: 2}
 --- !u!1001 &100100000

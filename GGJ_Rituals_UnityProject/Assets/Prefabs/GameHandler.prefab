@@ -115,7 +115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Soundtrack: {fileID: 8300000, guid: d9d81f94e79ab3d4b9601ba490ec0cbe, type: 3}
-  RitualMusic: {fileID: 8300000, guid: 6f136962e4070db409bf0ef80e78ac87, type: 3}
+  RitualMusic: {fileID: 8300000, guid: 525455be05f8a6744aaa5dcf14dab38d, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

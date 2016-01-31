@@ -44,7 +44,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 153992}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -397.6, y: -0.026666664, z: -413.8}
+  m_LocalPosition: {x: -397.6, y: -0.026666664, z: -414}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 484368}
@@ -161,18 +161,23 @@ MonoBehaviour:
   RitualList: []
   TotemList: []
   ActivatableTotem: {fileID: 0}
+  GameHandler: {fileID: 0}
   RitualSequenceCount: 2
   ButtonTimingDistance: 1
   ButtonTimingAllowedOffset: 0.2
   ChipMunkSounds: 0
   ButtonASound: {fileID: 8300000, guid: 2c3dfc4ad1831b8429257cc93110978e, type: 3}
-  ButtonASoundChipMunk: {fileID: 0}
+  ButtonASoundChipMunk: {fileID: 8300000, guid: 1d6a4312ace627f40a98abab405adcec,
+    type: 3}
   ButtonBSound: {fileID: 8300000, guid: d4ef5ce4ed0a5ab4ea2a5a3e28f5905a, type: 3}
-  ButtonBSoundChipMunk: {fileID: 0}
+  ButtonBSoundChipMunk: {fileID: 8300000, guid: aa4ad66e950aced45ab8e9da42a69c16,
+    type: 3}
   ButtonXSound: {fileID: 8300000, guid: 263df8c9321e8e94ab410d64fc8dd8b3, type: 3}
-  ButtonXSoundChipMunk: {fileID: 0}
+  ButtonXSoundChipMunk: {fileID: 8300000, guid: 4bf9428f6b659c542937977538021c62,
+    type: 3}
   ButtonYSound: {fileID: 8300000, guid: 0f4b9c795977f8d469ffe30dafb264f1, type: 3}
-  ButtonYSoundChipMunk: {fileID: 0}
+  ButtonYSoundChipMunk: {fileID: 8300000, guid: e7fa2a9d82796b9418192566dca135ea,
+    type: 3}
   ShortCheer: {fileID: 8300000, guid: a4ae8cdfd7327464ba6bf3d038af4ff5, type: 3}
   LongCheer: {fileID: 8300000, guid: c77a5da90f46def41b4d7f5f413d9d27, type: 3}
 --- !u!124 &12448160
@@ -188,7 +193,7 @@ NavMeshAgent:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 153992}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.62
   m_Speed: 25
   m_Acceleration: 50
@@ -302,7 +307,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_LocalPosition.z
-      value: -413.8
+      value: -414
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Acceleration
@@ -316,6 +321,26 @@ Prefab:
       propertyPath: ChipMunkSounds
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: ButtonASoundChipMunk
+      value: 
+      objectReference: {fileID: 8300000, guid: 1d6a4312ace627f40a98abab405adcec, type: 3}
+    - target: {fileID: 0}
+      propertyPath: ButtonBSoundChipMunk
+      value: 
+      objectReference: {fileID: 8300000, guid: aa4ad66e950aced45ab8e9da42a69c16, type: 3}
+    - target: {fileID: 0}
+      propertyPath: ButtonXSoundChipMunk
+      value: 
+      objectReference: {fileID: 8300000, guid: 4bf9428f6b659c542937977538021c62, type: 3}
+    - target: {fileID: 0}
+      propertyPath: ButtonYSoundChipMunk
+      value: 
+      objectReference: {fileID: 8300000, guid: e7fa2a9d82796b9418192566dca135ea, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 153992}

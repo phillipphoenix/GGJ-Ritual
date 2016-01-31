@@ -1,0 +1,252 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &144814
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 453762}
+  - 195: {fileID: 19543054}
+  - 135: {fileID: 13529364}
+  - 114: {fileID: 11498204}
+  - 114: {fileID: 11476360}
+  - 114: {fileID: 11424018}
+  - 114: {fileID: 11433466}
+  - 54: {fileID: 5472702}
+  - 212: {fileID: 21213002}
+  m_Layer: 0
+  m_Name: Villager
+  m_TagString: villager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &453762
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 144814}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!54 &5472702
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 144814}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &11424018
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 144814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae7fbc6b07dbe8242b45e053aab03375, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11433466
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 144814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53e9b7860e86b0e40a7fac1a56672bbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: 0
+  wantToRefurnish_Store: 0
+  wantToRefurnish_WaterSource: 0
+  gatheringTime: 2
+  storingTime: 2
+  currentWorkingState: 0
+  WalkSprites:
+  - {fileID: 21300000, guid: e354c040826abd14899a2ca71981c339, type: 3}
+  - {fileID: 21300002, guid: e354c040826abd14899a2ca71981c339, type: 3}
+  - {fileID: 21300004, guid: e354c040826abd14899a2ca71981c339, type: 3}
+  - {fileID: 21300006, guid: e354c040826abd14899a2ca71981c339, type: 3}
+  - {fileID: 21300008, guid: e354c040826abd14899a2ca71981c339, type: 3}
+  - {fileID: 21300010, guid: e354c040826abd14899a2ca71981c339, type: 3}
+  - {fileID: 21300012, guid: e354c040826abd14899a2ca71981c339, type: 3}
+  - {fileID: 21300014, guid: e354c040826abd14899a2ca71981c339, type: 3}
+  - {fileID: 21300016, guid: e354c040826abd14899a2ca71981c339, type: 3}
+  - {fileID: 21300018, guid: e354c040826abd14899a2ca71981c339, type: 3}
+  - {fileID: 21300020, guid: e354c040826abd14899a2ca71981c339, type: 3}
+  - {fileID: 21300022, guid: e354c040826abd14899a2ca71981c339, type: 3}
+  - {fileID: 21300024, guid: e354c040826abd14899a2ca71981c339, type: 3}
+  - {fileID: 21300026, guid: e354c040826abd14899a2ca71981c339, type: 3}
+  - {fileID: 21300028, guid: e354c040826abd14899a2ca71981c339, type: 3}
+  - {fileID: 21300030, guid: e354c040826abd14899a2ca71981c339, type: 3}
+  - {fileID: 21300032, guid: e354c040826abd14899a2ca71981c339, type: 3}
+  - {fileID: 21300034, guid: e354c040826abd14899a2ca71981c339, type: 3}
+  - {fileID: 21300036, guid: e354c040826abd14899a2ca71981c339, type: 3}
+  - {fileID: 21300038, guid: e354c040826abd14899a2ca71981c339, type: 3}
+  - {fileID: 21300040, guid: e354c040826abd14899a2ca71981c339, type: 3}
+  - {fileID: 21300042, guid: e354c040826abd14899a2ca71981c339, type: 3}
+  - {fileID: 21300044, guid: e354c040826abd14899a2ca71981c339, type: 3}
+  - {fileID: 21300046, guid: e354c040826abd14899a2ca71981c339, type: 3}
+  - {fileID: 21300048, guid: e354c040826abd14899a2ca71981c339, type: 3}
+  - {fileID: 21300050, guid: e354c040826abd14899a2ca71981c339, type: 3}
+  - {fileID: 21300052, guid: e354c040826abd14899a2ca71981c339, type: 3}
+  - {fileID: 21300054, guid: e354c040826abd14899a2ca71981c339, type: 3}
+  - {fileID: 21300056, guid: e354c040826abd14899a2ca71981c339, type: 3}
+  - {fileID: 21300058, guid: e354c040826abd14899a2ca71981c339, type: 3}
+  - {fileID: 21300060, guid: e354c040826abd14899a2ca71981c339, type: 3}
+  - {fileID: 21300062, guid: e354c040826abd14899a2ca71981c339, type: 3}
+  - {fileID: 21300066, guid: e354c040826abd14899a2ca71981c339, type: 3}
+  - {fileID: 21300068, guid: e354c040826abd14899a2ca71981c339, type: 3}
+--- !u!114 &11476360
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 144814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c784717876aae840922ddf5dedafb85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hunger: 0
+  _thirst: 0
+  _happiness: 0
+  _sickness: 0
+  _fear: 0
+  startingHunger: 0
+  startingThirst: 0
+  startingHappiness: 0
+  startingSickness: 0
+  startingFear: 0
+  wareHouse: {fileID: 0}
+  workplace: {fileID: 0}
+--- !u!114 &11498204
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 144814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a849c65281610c4caaadc1187b19498, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  food: 
+  drink: 
+  medicine: 
+  money: 0
+  weapon: 0
+--- !u!135 &13529364
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 144814}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!195 &19543054
+NavMeshAgent:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 144814}
+  m_Enabled: 1
+  m_Radius: 0.25
+  m_Speed: 7
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 0
+  m_StoppingDistance: 0.5
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1
+  m_BaseOffset: 0.5
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 3
+--- !u!212 &21213002
+SpriteRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 144814}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_ReflectionProbeUsage: 0
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: e354c040826abd14899a2ca71981c339, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_TagString
+      value: villager
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Speed
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e354c040826abd14899a2ca71981c339,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: m_AngularSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 144814}
+  m_IsPrefabParent: 1

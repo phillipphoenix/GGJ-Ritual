@@ -5,7 +5,6 @@ using GamepadInput;
 
 public class Totem : MonoBehaviour
 {
-
     public Ritual TotemRitual;
     public List<Shaman> PlayerList;
     public float ActivationDistance;

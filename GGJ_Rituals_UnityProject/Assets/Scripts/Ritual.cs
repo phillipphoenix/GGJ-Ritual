@@ -9,16 +9,16 @@ public class Ritual
 {
     private static int CurrentId = 0;
 
-    public int Id;
+    public int RitualId;
     public GamePad.Button[] Sequence;
     public string Name;
 
-    public void Awake()
-    {
-        Id = CurrentId++;
-    }
-
     private static Random _rand = new Random();
+
+    public Ritual()
+    {
+        RitualId = CurrentId++;
+    }
 
     public GamePad.Button this[int i]
     {

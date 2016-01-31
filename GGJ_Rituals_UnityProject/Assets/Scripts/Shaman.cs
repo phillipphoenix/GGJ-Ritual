@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using GamepadInput;
+using Random = System.Random;
 
 public class Shaman : MonoBehaviour
 {
@@ -24,7 +25,7 @@ public class Shaman : MonoBehaviour
     public Totem ActivatableTotem;
 
     // Game Handler.
-    private GameHandler gameHandler;
+    public GameHandler GameHandler;
 
     // Movement.
     private Vector3 prevWalkToPoint;
@@ -64,7 +65,8 @@ public class Shaman : MonoBehaviour
 
     public void Awake()
     {
-        gameHandler = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameHandler>();
+        if (GameHandler == null)
+            GameHandler = GameObject.FindObjectOfType<GameHandler>();
     }
 
     // Use this for initialization
@@ -76,7 +78,6 @@ public class Shaman : MonoBehaviour
         _buttonSoundsSource.volume = 0.5f;
         _cheeringSoundsSource = gameObject.AddComponent<AudioSource>();
         _cheeringSoundsSource.volume = 0.5f;
-        walkToPoint = transform.position;
 
         // Find all explorable totems in the world.
         TotemList = GameObject.FindObjectsOfType<Totem>().ToList();
@@ -86,6 +87,11 @@ public class Shaman : MonoBehaviour
         {
             totem.PlayerList.Add(this);
         }
+        Random r = new Random();
+        int startTotemIndex = r.Next(TotemList.Count);
+        transform.position = TotemList[startTotemIndex].transform.position + new Vector3(0, 0, -50);
+        walkToPoint = transform.position;
+        navAgent.enabled = true;
     }
 
     // Update is called once per frame
@@ -144,8 +150,8 @@ public class Shaman : MonoBehaviour
     {
         if (ActivatableTotem != null && GamePad.GetButtonDown(GamePad.Button.A, ControllerIndex))
         {
-            //Ritual found = RitualList.FirstOrDefault(ritual => ritual.Id == ActivatableTotem.TotemRitual.Id);
-            if (RitualList.FirstOrDefault(ritual => ritual.Id == ActivatableTotem.TotemRitual.Id) == null)
+            //Ritual found = RitualList.FirstOrDefault(ritual => ritual.RitualId == ActivatableTotem.TotemRitual.RitualId);
+            if (RitualList.FirstOrDefault(ritual => ritual.RitualId == ActivatableTotem.TotemRitual.RitualId) == null)
             {
                 Debug.Log("Found new ritual!");
                 RitualList.Add(ActivatableTotem.TotemRitual);
@@ -156,7 +162,7 @@ public class Shaman : MonoBehaviour
 
     private void StartRitual()
     {
-        gameHandler.PlayRitualMusic();
+        GameHandler.PlayRitualMusic();
         _ritualSelected = -1;
         _ritualButtonIndex = 0;
         _ritualTimer = 0;
@@ -169,7 +175,7 @@ public class Shaman : MonoBehaviour
 
     private void StopRitual()
     {
-        gameHandler.PlaySoundtrackMusic();
+        GameHandler.PlaySoundtrackMusic();
         StopAllCoroutines();
         InRitualMode = false;
     }

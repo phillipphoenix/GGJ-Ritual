@@ -147,7 +147,7 @@ public class VillagerActions : MonoBehaviour {
     //Refurnish from the store(either food or medicines)
     public void refurnish()
     {
-            float currentMoney = _villagerInventoryRef.money;
+        float currentMoney = _villagerInventoryRef.money;
             
             int itemNo = (int)Random.Range(0, 10000) % 4;
             if (_villagerStateRef.getHunger() > _villagerStateRef.getSickness())
@@ -211,6 +211,7 @@ public class VillagerActions : MonoBehaviour {
     public void searchForMedicine()
     {
         _brainRef.setState(executionState.ExecutingAction);
+        _brainRef.wantToRefurnish_Store = true;
         _navMeshComp.destination = _storeRef.GetComponent<Transform>().position;
     }
    

@@ -241,6 +241,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11471198, guid: e1842cb5a868d8f43b3da028fda50fc6, type: 2}
+      propertyPath: hungerDecayingTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471198, guid: e1842cb5a868d8f43b3da028fda50fc6, type: 2}
+      propertyPath: thirstDecayingTime
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e1842cb5a868d8f43b3da028fda50fc6, type: 2}
   m_IsPrefabParent: 0

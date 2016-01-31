@@ -49,7 +49,7 @@ public class Shaman : MonoBehaviour
     private int _curSequenceCount;
     private float _ritualTimer;
     private bool _ritualStarted;
-    public int _ritualSelected;
+    private int _ritualSelected;
     private int _ritualButtonIndex;
     private bool _ritualButtonSuccess;
 

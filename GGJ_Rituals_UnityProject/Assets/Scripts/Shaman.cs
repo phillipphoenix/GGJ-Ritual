@@ -49,7 +49,7 @@ public class Shaman : MonoBehaviour
     private int _curSequenceCount;
     private float _ritualTimer;
     private bool _ritualStarted;
-    private int _ritualSelected;
+    public int _ritualSelected;
     private int _ritualButtonIndex;
     private bool _ritualButtonSuccess;
 
@@ -148,40 +148,6 @@ public class Shaman : MonoBehaviour
             InRitualMode = true;
         }
     }
-
-    /*private void HandleTotemActivation()
-    {
-        Totem closeByTotem = CloseByTotem();
-        if (closeByTotem != null)
-        {
-            // Press key to activate Totem and learn new ritual.
-            if (GamePad.GetButtonDown(GamePad.Button.A, ControllerIndex))
-            {
-                RitualList.Add(closeByTotem.TotemRitual); // Add the new ritual.
-                StartRitual(); // Start ritual mode.
-                _ritualSelected = RitualList.Count - 1; // Select the new ritual as the ritual to be used.
-            }
-        }
-    }*/
-
-    /*private Totem CloseByTotem()
-    {
-        Totem totem = null;
-        float minDist = Mathf.Infinity;
-        foreach (Totem t in TotemList)
-        {
-            float dist = Vector3.Distance(t.transform.position, transform.position);
-            if (dist < minDist)
-            {
-                minDist = dist;
-                if (dist < MaxTotemActivationDistance)
-                {
-                    totem = t;
-                }
-            }
-        }
-        return totem;
-    }*/
 
     private void StartRitual()
     {
@@ -283,6 +249,7 @@ public class Shaman : MonoBehaviour
                         else
                         {
                             Debug.LogError("Starging fail - No ritual with pressed button.");
+                            StopRitual();
                         }
                     }
                 }
@@ -307,7 +274,7 @@ public class Shaman : MonoBehaviour
 
     private bool CanStartRitual(GamePad.Button button, out int ritualIndex)
     {
-        ritualIndex = 0;
+        ritualIndex = -1;
         for (int i = 0; i < RitualList.Count; i++)
         {
             if (RitualList[i][0] == button)

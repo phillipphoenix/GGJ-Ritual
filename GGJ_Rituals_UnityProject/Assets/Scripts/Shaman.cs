@@ -40,10 +40,15 @@ public class Shaman : MonoBehaviour
     public float ButtonTimingAllowedOffset;
     private AudioSource _buttonSoundsSource;
     private AudioSource _cheeringSoundsSource;
+    public bool ChipMunkSounds;
     public AudioClip ButtonASound;
+    public AudioClip ButtonASoundChipMunk;
     public AudioClip ButtonBSound;
+    public AudioClip ButtonBSoundChipMunk;
     public AudioClip ButtonXSound;
+    public AudioClip ButtonXSoundChipMunk;
     public AudioClip ButtonYSound;
+    public AudioClip ButtonYSoundChipMunk;
     public AudioClip ShortCheer;
     public AudioClip LongCheer;
     private int _curSequenceCount;
@@ -297,25 +302,54 @@ public class Shaman : MonoBehaviour
         if (GamePad.GetButtonDown(GamePad.Button.A, ControllerIndex))
         {
             buttonPressed = GamePad.Button.A;
-            _buttonSoundsSource.clip = ButtonASound;
+            if (ChipMunkSounds)
+            {
+                _buttonSoundsSource.clip = ButtonASoundChipMunk;
+            }
+            else
+            {
+                _buttonSoundsSource.clip = ButtonASound;
+            }
+            
             _buttonSoundsSource.Play();
         }
         if (GamePad.GetButtonDown(GamePad.Button.B, ControllerIndex))
         {
             buttonPressed = GamePad.Button.B;
-            _buttonSoundsSource.clip = ButtonBSound;
+            if (ChipMunkSounds)
+            {
+                _buttonSoundsSource.clip = ButtonBSoundChipMunk;
+            }
+            else
+            {
+                _buttonSoundsSource.clip = ButtonBSound;
+            }
             _buttonSoundsSource.Play();
         }
         if (GamePad.GetButtonDown(GamePad.Button.X, ControllerIndex))
         {
             buttonPressed = GamePad.Button.X;
-            _buttonSoundsSource.clip = ButtonXSound;
+            if (ChipMunkSounds)
+            {
+                _buttonSoundsSource.clip = ButtonXSoundChipMunk;
+            }
+            else
+            {
+                _buttonSoundsSource.clip = ButtonXSound;
+            }
             _buttonSoundsSource.Play();
         }
         if (GamePad.GetButtonDown(GamePad.Button.Y, ControllerIndex))
         {
             buttonPressed = GamePad.Button.Y;
-            _buttonSoundsSource.clip = ButtonYSound;
+            if (ChipMunkSounds)
+            {
+                _buttonSoundsSource.clip = ButtonYSoundChipMunk;
+            }
+            else
+            {
+                _buttonSoundsSource.clip = ButtonYSound;
+            }
             _buttonSoundsSource.Play();
         }
         

@@ -164,10 +164,15 @@ MonoBehaviour:
   RitualSequenceCount: 2
   ButtonTimingDistance: 1
   ButtonTimingAllowedOffset: 0.2
+  ChipMunkSounds: 0
   ButtonASound: {fileID: 8300000, guid: 2c3dfc4ad1831b8429257cc93110978e, type: 3}
+  ButtonASoundChipMunk: {fileID: 0}
   ButtonBSound: {fileID: 8300000, guid: d4ef5ce4ed0a5ab4ea2a5a3e28f5905a, type: 3}
+  ButtonBSoundChipMunk: {fileID: 0}
   ButtonXSound: {fileID: 8300000, guid: 263df8c9321e8e94ab410d64fc8dd8b3, type: 3}
+  ButtonXSoundChipMunk: {fileID: 0}
   ButtonYSound: {fileID: 8300000, guid: 0f4b9c795977f8d469ffe30dafb264f1, type: 3}
+  ButtonYSoundChipMunk: {fileID: 0}
   ShortCheer: {fileID: 8300000, guid: a4ae8cdfd7327464ba6bf3d038af4ff5, type: 3}
   LongCheer: {fileID: 8300000, guid: c77a5da90f46def41b4d7f5f413d9d27, type: 3}
 --- !u!124 &12448160
@@ -186,7 +191,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_Radius: 0.62
   m_Speed: 25
-  m_Acceleration: 15
+  m_Acceleration: 50
   avoidancePriority: 50
   m_AngularSpeed: 0
   m_StoppingDistance: 0
@@ -298,6 +303,18 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_LocalPosition.z
       value: -413.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Acceleration
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_AutoBraking
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: ChipMunkSounds
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

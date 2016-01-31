@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &139378
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 470904}
+  - 114: {fileID: 11444856}
+  m_Layer: 0
+  m_Name: LevelCreator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &470904
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 139378}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11444856
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 139378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1677bcf4650d30d45a9881d88718bfda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MapOrigin: {x: -1000, y: -1000}
+  MapSize: {x: 2000, y: 2000}
+  Seed: 123
+  FbmIterations: 12
+  MinDensityForTrees: 0.52
+  TreePrefab: {fileID: 199660, guid: 798e413801690f94dad3e2300c11b446, type: 2}
+  SkipSpaces: 15
+  UseIterationsForTrees: 0
+  MaxOffset: {x: 20, y: 40}
+  NbOfTotems: 5
+  TotemPrefab: {fileID: 125628, guid: 183682038623aae4f818e46b385b9dbf, type: 2}
+  MinTotemDistance: 50
+  TotemClearingDistance: 50
+  NbOfVillages: 6
+  VillagePrefab: {fileID: 128828, guid: abe01e938253eee45880034b20535db8, type: 2}
+  MinVillageDistance: 200
+  VillageClearingDistance: 100
+  ShamanPrefab: {fileID: 153992, guid: 8ad27bfb78abd964eae37c6e68d19d1d, type: 2}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 139378}
+  m_IsPrefabParent: 1

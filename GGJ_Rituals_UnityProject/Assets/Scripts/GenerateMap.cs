@@ -38,12 +38,18 @@ public class GenerateMap : MonoBehaviour
     public float VillageClearingDistance;
     private List<Transform> villageList; 
 
+    // Values for placing shamans.
+    [Header("Shaman settings")]
+    public GameObject ShamanPrefab;
+
     public void Awake()
     {
         Random.seed = Seed;
         GenerateTrees();
         GenerateTotems();
         GenerateVillages();
+
+        GameObject.Instantiate(ShamanPrefab);
     }
 
     private void GenerateTrees()
